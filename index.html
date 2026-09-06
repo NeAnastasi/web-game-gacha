@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Гача</title>
+
+  <!-- Подключение шрифтов -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div id="app">
+
+    <!-- Счётчик кликов и кнопка -->
+    <div id="clickCounter" class="overpass">Клики: 0</div>
+    <button id="clickBtn" class="clicker ubuntu-light">Клик!</button>
+
+    <!-- Верхние баннеры -->
+    <div class="banner-container ubuntu-light">
+      <div class="banner" data-char="Ali" data-image="images/али5.jpg"><span class="banner-text">Али</span></div>
+      <div class="banner" data-char="Den" data-image="images/дэн5.jpg"><span class="banner-text">Дэн</span></div>
+      <div class="banner" data-char="Hiroshi" data-image="images/хироши5.jpg"><span class="banner-text">Хироши</span>
+      </div>
+      <div class="banner" data-char="Sonkhun" data-image="images/сонкхун5.jpg"><span class="banner-text">Сонкхун</span>
+      </div>
+      <div class="banner" data-char="Lucius" data-image="images/люций5.jpg"><span class="banner-text">Люций</span></div>
+    </div>
+
+    <!-- Главный баннер + текст -->
+    <div class="main-section">
+      <div id="mainBanner"></div>
+
+
+      <div class="banner-info">
+        <div id="bannerText" class="window banner-texting">
+          <h2 id="charName" class="ubuntu-light">Выберите баннер</h2>
+          <p id="charDesc" class="raleway-300">Описание персонажа появится здесь.</p>
+        </div>
+        <div id="bannerText2" class="window banner-texting">
+          <a id="charURL" class="raleway-300" href="https://t.me/cry_priton/1622?single" target="_blank">О персонаже можно узнать больше в ткг! Клик на этот текст.</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Крутки -->
+    <div class="buttons ubuntu-light">
+      <button id="roll1" class="rollButton">1 КРУТКА (15 кликов)</button>
+      <button id="roll10" class="rollButton">10 КРУТОК (150 кликов)</button>
+    </div>
+
+    <div id="modal" class="modal">
+      <img id="modalImg" class="modal-content">
+    </div>
+
+    <div class="overlay">
+      <button id="exitButton" class="overlay-exit-button">×</button>
+      <div class="overlay-content">
+        <div class="cardContainer">
+
+        </div>
+        <div class="overlay-text raleway-300"></div>
+      </div>
+      <button id="skipBtn" class="ubuntu-light overlay-skip-button">ПРОПУСТИТЬ</button>
+      <button id="nextButton" class="overlay-next-button">></button>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+
+</html>
+
+<body>
+
+  <div id="collectionSection">
+    <h2 class="ubuntu-light">Коллекция</h2>
+    <div id="collectionList" class="collection-list overpass"></div>
+
+    <h2 class="ubuntu-light">Секретные карточки</h2>
+    <div id="secretList" class="secret-list overpass"></div>
+  </div>
